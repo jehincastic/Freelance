@@ -1,7 +1,11 @@
 const mongoose = require("mongoose");
 
 const CitySchema = new mongoose.Schema({
-    city: { type: String, unique: true },
+	id: { 
+	    type: String,
+	    unique: true,
+  	    required: true
+	},
     branches: [String]
 });
 
