@@ -1,12 +1,12 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const CitySchema = new mongoose.Schema({
-	id: { 
-	    type: String,
-	    unique: true,
-  	    required: true
+	id: {
+		type: String,
+		unique: true,
+		required: true
 	},
-    branches: [String]
+	branches: [String]
 });
 
-module.exports = mongoose.model("City", CitySchema);
+module.exports = mongoose.model('City', CitySchema);
