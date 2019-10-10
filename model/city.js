@@ -6,7 +6,17 @@ const CitySchema = new mongoose.Schema({
 		unique: true,
 		required: true
 	},
-	branches: [String]
+	branches: {
+		type: [{
+			branchName: {
+				type: String
+			},
+			location: {
+				type: String
+			}
+		}],
+		default: []
+	}
 });
 
 module.exports = mongoose.model('City', CitySchema);
